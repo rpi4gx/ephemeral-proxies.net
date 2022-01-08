@@ -7,7 +7,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="termynal.css">
+    <script src="jquery.min.js"></script>
+    <script src="typed.custom.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Fira+Mono"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <title>Ephemeral proxies</title>
@@ -109,9 +112,86 @@
                     </div>
                 </div>
             </div>
-
             <div class="container">
-                <img src="./e.gif" class="img-fluid" alt="">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="terminal-window">
+                        <header>
+                          <div class="button green"></div>
+                          <div class="button yellow"></div>
+                          <div class="button red"></div>
+                        </header>
+                        <section class="terminal">
+                          <div class="history"></div>
+                          $&nbsp;<span class="prompt"></span>
+                          <span class="typed-cursor"></span>
+
+                        </section>
+                      </div>
+                      <!-- data -->
+                        <div class="terminal-data mimik-run-output">
+                       <br>Found 1 feature<br>
+                       ----------------------------------------------<br>
+                       Feature: Bottles  <span class="gray"># ./features/bottles.feature</span><br><br>
+
+                       &nbsp;&nbsp;Scenario: A bottle falls from the wall<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <span class="gray">Given 100 green bottles are standing</span><br>
+                       &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <span class="gray">when 1 green bottle accidentally falls</span><br>
+                       &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓</span> <span class="gray">then there are 99 green bottles standing</span><br>
+                       <br>
+                          <span class="gray">&nbsp;---------- ----------- ------- -------- --------</span><br>
+                      &nbsp;&nbsp;Features&nbsp;&nbsp;&nbsp;Scenarios&nbsp;&nbsp;&nbsp;Steps&nbsp;&nbsp;&nbsp;Passed&nbsp;&nbsp;&nbsp;Failed<br>
+                          <span class="gray">&nbsp;---------- ----------- ------- -------- --------</span><br>
+                      &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">✓ 4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0      <br>
+                        <br>
+                      &nbsp;&nbsp;Completed 1 feature in 0.01s<br>
+                        <br>
+                      </div>
+                      <div class="terminal-data api-output">
+                        <pre>
+                          <span style="color:white">
+<span style="font-weight:bold;">{
+  </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;success&quot;</span><span style="font-weight:bold;">: </span>true<span style="font-weight:bold;">,
+  </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;proxy&quot;</span><span style="font-weight:bold;">: </span><span style="font-weight:bold;">{
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;id&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;207b8f5b3288c87a26a0646ae286f405&quot;</span><span style="font-weight:bold;">,
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;host&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;l9de0.ep-proxy.net&quot;</span><span style="font-weight:bold;">,
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;port&quot;</span><span style="font-weight:bold;">: </span>32056<span style="font-weight:bold;">,
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;expires_at&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;2022-01-08T22:35:29.000Z&quot;</span><span style="font-weight:bold;">,
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;whitelisted_ips&quot;</span><span style="font-weight:bold;">: </span><span style="font-weight:bold;">[
+      </span><span style="color:rgba(3, 188, 1, 1);">&quot;185.127.75.227&quot;</span><span style="font-weight:bold;">
+    ]</span><span style="font-weight:bold;">,
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;visibility&quot;</span><span style="font-weight:bold;">: </span><span style="font-weight:bold;">{
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;ip&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;193.203.9.242&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;country&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;United Kingdom&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;country_iso&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;GB&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;country_eu&quot;</span><span style="font-weight:bold;">: </span>true<span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;latitude&quot;</span><span style="font-weight:bold;">: </span>51.5164<span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;longitude&quot;</span><span style="font-weight:bold;">: </span>-0.093<span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;timezone&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;Europe/London&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;asn&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;AS200557&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;asn_org&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;Region40 LLC&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;zip_code&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;EC2V&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;region_name&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;England&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;region_code&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;ENG&quot;</span><span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;city&quot;</span><span style="font-weight:bold;">: </span><span style="color:rgba(3, 188, 1, 1);">&quot;London&quot;</span><span style="font-weight:bold;">
+    }</span><span style="font-weight:bold;">,
+    </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;features&quot;</span><span style="font-weight:bold;">: </span><span style="font-weight:bold;">{
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;static&quot;</span><span style="font-weight:bold;">: </span>true<span style="font-weight:bold;">,
+      </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;supported_protocols&quot;</span><span style="font-weight:bold;">: </span><span style="font-weight:bold;">{
+        </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;socks4&quot;</span><span style="font-weight:bold;">: </span>false<span style="font-weight:bold;">,
+        </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;socks5&quot;</span><span style="font-weight:bold;">: </span>false<span style="font-weight:bold;">,
+        </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;http&quot;</span><span style="font-weight:bold;">: </span>true<span style="font-weight:bold;">,
+        </span><span style="font-weight:bold;color:rgba(104, 113, 255, 1);">&quot;https&quot;</span><span style="font-weight:bold;">: </span>true<span style="font-weight:bold;">
+      }</span><span style="font-weight:bold;">
+    }</span><span style="font-weight:bold;">
+  }</span><span style="font-weight:bold;">
+}</span>
+                          </span>
+                        </pre>
+                      </div>
+
+                </div>
+                <div class="col-lg-1"></div>
             </div>
         </div>
     </main>
@@ -130,6 +210,7 @@
             </div>
         </div>
     </footer>
+    <script src="termynal.js"></script>
 </body>
 
 </html>
